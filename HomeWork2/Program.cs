@@ -82,14 +82,14 @@
                     Console.WriteLine();
                     Console.WriteLine();
 
-                    if (t.starving - 20 > 80)
+                    if (t.happiness - 20 > 80)
                     {
                         t.starving = 100;
                         Console.WriteLine("u walk with ur Tomagochi");
                     }
-                    else if (t.starving - 20 < 80)
+                    else if (t.happiness - 20 < 80)
                     {
-                        t.starving += 20;
+                        t.happiness += 20;
                         Console.WriteLine("u walk with ur Tomagochi");
                     }
                     else
@@ -101,6 +101,48 @@
                         t.hp -= 20;
                     }
                 }
+
+                else if (key.KeyChar == '3')
+                {
+                    Console.WriteLine();
+                    Console.WriteLine();
+
+                    if (t.hp - 20 > 80)
+                    {
+                        t.hp = 100;
+                        Console.WriteLine("u heal ur Tomagochi");
+                    }
+                    else if (t.hp - 20 < 80)
+                    {
+                        t.hp += 20;
+                        Console.WriteLine("u heal ur Tomagochi");
+                    }
+                    else
+                    {
+                        Console.WriteLine("ur tomagochi doesn't need heal");
+                    }
+                    if (delete != 3)
+                    {
+                        t.hp -= 20;
+                    }
+                }
+
+                else if (key.KeyChar == '4')
+                {
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("u are afk");
+                    Thread.Sleep(4000);
+                    t.hp -= 20;
+                }
+                else if (key.KeyChar == '5')
+                {
+
+                    t.hp = 0;
+                    Console.WriteLine("ur tomagochi die!!!!!");
+                }
+
+
                 Thread.Sleep(3000);
                 Console.Clear(); 
 
