@@ -102,7 +102,7 @@
                     }
                 }
                 Thread.Sleep(3000);
-                Console.Clear();
+                Console.Clear(); 
 
             }
             while (t.hp > 0);
